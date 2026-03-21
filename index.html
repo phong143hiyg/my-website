@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HUST – Cổng thông tin sinh viên</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box">
+      <img src="https://i.ibb.co/HDh6HhFR/hust.png" alt="Avatar Hust">
+    </div>
+    <div>
+      <div class="school-name">ĐẠI HỌC BÁCH KHOA HÀ NỘI</div>
+      <div class="school-sub">CỔNG THÔNG TIN SINH VIÊN</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="bk-icon">
+      <img src="https://i.ibb.co/tMr4P8sJ/ctsv.png" atl="logo ctsv">
+    </div>
+    <div class="greeting-text">
+      <div class="hi">XIN CHÀO</div>
+      <div class="sub">TRẦN VĂN PHONG</div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#">TRANG CHỦ</a></li>
+    <li><a href="#">INTERNATIONAL STUDENT</a></li>
+    <li><a href="#">NGOẠI KHÓA</a></li>
+    <li><a href="#">HƯỚNG NGHIỆP</a></li>
+    <li><a href="#">HỌC BỔNG</a></li>
+    <li><a href="#">CHẤM ĐIỂM</a></li>
+    <li><a href="#">HÀNH CHÍNH</a></li>
+    <li><a href="#">TÂN SINH VIÊN</a></li>
+    <li><a href="#">HỒ SƠ</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">CTSV</a> / <a href="#">HỒ SƠ</a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <div class="profile-photo">
+        <img src="https://i.ibb.co/TBJP8hz8/hust-back.png" alt="Ảnh trường" />
+      </div>
+
+      <div class="avatar-wrapper">
+          <img src="https://i.ibb.co/Z68Z2xtj/IMG-9438-copy.jpg" alt="Ảnh cá nhân" >
+      </div>
+      
+      <div class="profile-info">
+        <div>MSSV: 20230079</div>
+        <div>Họ tên: Trần Văn Phong</div>
+        <div>Lớp: Kỹ thuật máy tính</div>
+        <div>Email: phong.tv2300079@sis.hust.edu.vn</div>
+        <div>Email cá nhân: phongtran.14032005@gmail.com</div>
+      </div>
+    </div>
+
+    <!-- Status Card -->
+    <div class="status-card">
+      <div class="status-tabs">
+        <button class="active" onclick="switchStatusTab(this)">Trạng thái</button>
+        <button onclick="switchStatusTab(this)">Quản lý</button>
+      </div>
+      <div class="status-body">
+        <div>Trạng thái học tập: <strong>Học</strong></div>
+        <div>CPA: <strong>2.94</strong></div>
+        <div>Nợ: <strong>4 TC</strong></div>
+        <div>Tích lũy: <strong>61.0 TC</strong></div>
+        <div>Mức cảnh cáo: <strong>M0</strong></div>
+        <div>Trình độ: Năm thứ nhất</div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- Profile Tabs Card -->
+    <div class="card">
+      <div class="card-tabs">
+        <button class="active" onclick="switchTab(this)">Lý lịch</button>
+        <button onclick="switchTab(this)">Quyết định</button>
+        <button onclick="switchTab(this)">Khen thưởng</button>
+        <button onclick="switchTab(this)">Liên hệ</button>
+        <button onclick="switchTab(this)">Nhận xét</button>
+        <button onclick="switchTab(this)">Hoạt động tham gia</button>
+      </div>
+
+      <div class="card-body">
+
+        <!-- Thông tin cá nhân -->
+        <span class="section-title">Thông tin cá nhân</span>
+
+        <table class="info-table">
+          <tr>
+            <td>Ngày sinh: 14/03/2005</td>
+            <td>Nơi sinh: Tỉnh Sơn La</td>
+            <td>Giới tính: Nam</td>
+          </tr>
+          <tr>
+            <td>Số CMTND: 014205001826</td>
+            <td>Tôn giáo: Không</td>
+            <td>Dân tộc:</td>
+          </tr>
+          <tr>
+            <td>Ngày vào Đoàn:</td>
+            <td>Ngày vào Đảng:</td>
+          </tr>
+          <tr>
+            <td colspan="3">Đối tượng chính sách:</td>
+          </tr>
+          <tr>
+            <td colspan="3">Số thẻ bảo hiểm: 1421237618</td>
+          </tr>
+          <tr>
+            <td colspan="3">Địa chỉ thường trú: Bản Phát, Xã Chiềng Mung, Huyện Mai Sơn, Tỉnh Sơn La</td>
+          </tr>
+          <tr>
+            <td colspan="3">Nơi ở hiện tại: 12a ngách 152 ngõ 141 giáp nhị</td>
+          </tr>
+        </table>
+
+        <br> <br>
+
+        <!-- Thông tin gia đình -->
+        <span class="section-title">Thông tin gia đình</span>
+
+        <div class="family-title">Họ và tên cha: Trần Văn Thuân</div>
+        <table class="info-table">
+          <tr>
+            <td>Dân tộc: Kinh</td>
+            <td>Năm sinh: 1980</td>
+            <td>Quốc tịch: Việt Nam</td>
+          </tr>
+          <tr>
+            <td>Nơi làm việc:</td>
+            <td>Tôn giáo: Không</td>
+            <td>Nghề nghiệp: Nông dân</td>
+          </tr>
+          <tr>
+            <td colspan="3">Địa chỉ thường trú:</td>
+          </tr>
+          <tr>
+            <td colspan="3">Liên hệ: 0978880631</td>
+          </tr>
+        </table>
+
+        <div class="family-title" style="margin-top:14px;">Họ và tên mẹ: Phạm Thị Hiên</div>
+        <table class="info-table">
+          <tr>
+            <td>Dân tộc: Kinh</td>
+            <td>Năm sinh: 1981</td>
+            <td>Quốc tịch: Việt Nam</td>
+          </tr>
+          <tr>
+            <td>Nơi làm việc:</td>
+            <td>Tôn giáo: Không</td>
+            <td>Nghề nghiệp: Nông dân</td>
+          </tr>
+          <tr>
+            <td colspan="3">Địa chỉ thường trú:</td>
+          </tr>
+          <tr>
+            <td colspan="3">Liên hệ: 0376222758</td>
+          </tr>
+        </table>
+
+        <table class="info-table" style="margin-top:14px;">
+          <tr>
+            <td><strong>Thông tin người thân khác:</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Thuộc hộ:</strong></td>
+            <td><strong>Số sổ:</strong></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+<div class="container-2">
+<!-- Charts Card -->
+    <div class="card">
+      <div class="charts-row">
+        <div class="chart-block">
+          <div class="chart-title-label">Biểu đồ kết quả học tập</div>
+          <canvas id="gpaChart" height="220"></canvas>
+        </div>
+        <div class="chart-block">
+          <div class="chart-title-label">Điểm rèn luyện</div>
+          <canvas id="conductChart" height="220"></canvas>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  // GPA Chart
+  var gpaCtx = document.getElementById('gpaChart').getContext('2d');
+  new Chart(gpaCtx, {
+    type: 'bar',
+    data: {
+      labels: ['202401', '202402', '202501', '202502'],
+      datasets: [{
+        label: 'Kết quả',
+        data: [3.2, 3.8, 3.6, 4.0],
+        backgroundColor: '#3498db', 
+        borderRadius: 3
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: {
+          min: 0, max: 4.0,
+          ticks: { stepSize: 1 },
+          grid: { color: '#eee' }
+        },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Conduct Chart
+  var conCtx = document.getElementById('conductChart').getContext('2d');
+  new Chart(conCtx, {
+    type: 'bar',
+    data: {
+      labels: ['202401', '202402', '202051'],
+      datasets: [{
+        label: 'Điểm',
+        data: [75, 68, 80],
+        backgroundColor: '#2ecc71',
+        borderRadius: 3
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: {
+          min: 0, max: 100,
+          ticks: { stepSize: 20 },
+          grid: { color: '#eee' }
+        },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Tab switching - main tabs
+  function switchTab(btn) {
+    var tabs = btn.closest('.card-tabs').querySelectorAll('button');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+  }
+
+  // Tab switching - status tabs
+  function switchStatusTab(btn) {
+    var tabs = btn.closest('.status-tabs').querySelectorAll('button');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('active');
+    }
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

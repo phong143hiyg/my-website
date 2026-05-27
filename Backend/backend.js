@@ -1,13 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/user_management';
+
+if (!process.env.MONGODB_URI) {
+    console.warn('Warning: MONGODB_URI is not defined in .env, using local fallback.');
+}
+
 // Kết nối MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/user_management')
+mongoose.connect(MONGODB_URI)
     .then(() => console.log('Đã kết nối MongoDB thành công!'))
     .catch((err) => console.error('Lỗi kết nối DB:', err));
 
@@ -84,5 +93,5 @@ app.delete('/api/users/:id', async (req, res) => {
     }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Backend đang chạy tại http://localhost:${PORT}`));
